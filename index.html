@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Earn Desk — 独立交付 · 加密收款</title>
+  <style>
+    :root{--bg:#0a0e13;--panel:#121a24;--ink:#e7eef8;--muted:#8fa0b5;--acc:#5eead4;--line:#223041}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+    .wrap{max-width:880px;margin:0 auto;padding:28px 18px 56px}
+    h1{margin:0 0 8px;font-size:1.7rem}
+    h2{font-size:1.05rem;color:#cfe0f5;margin:22px 0 10px}
+    .muted{color:var(--muted)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    .price{color:var(--acc);font-weight:700;font-size:1.05rem}
+    .addr{font-family:ui-monospace,Consolas,monospace;word-break:break-all;background:#0a121b;border:1px dashed #2a3b52;border-radius:10px;padding:12px}
+    button{background:var(--acc);color:#042;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .chip{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:.8rem;color:var(--muted);margin:4px 6px 0 0}
+    a{color:var(--acc)}
+    ul{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="muted">INDEPENDENT · CLEAN ROOM</div>
+    <h1>Earn Desk</h1>
+    <p class="muted">从零自建的交付入口：技能包 / 自动化 / 赏金修复。不复用本机旧工程。</p>
+    <div>
+      <span class="chip">目标：任意金额到账</span>
+      <span class="chip">Rabby / EVM</span>
+      <span class="chip">当前链上余额：0</span>
+    </div>
+
+    <h2>收款地址</h2>
+    <div class="card">
+      <div class="addr" id="addr">0x6C7D9DD39A8E91EDbD5405DCb820e0153f77d89c</div>
+      <p style="margin:10px 0 0"><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('addr').textContent.trim()).then(()=>alert('已复制'))">复制地址</button></p>
+      <ul>
+        <li>链：Ethereum / Base / Arbitrum / Optimism / Polygon / BSC</li>
+        <li>资产：ETH 或 USDC/USDT</li>
+        <li>任意金额均可；付款后开 Issue 附 tx hash</li>
+      </ul>
+      <p><a href="https://eth.blockscout.com/address/0x6C7D9DD39A8E91EDbD5405DCb820e0153f77d89c" target="_blank" rel="noreferrer">浏览器查看地址</a></p>
+    </div>
+
+    <h2>标准交付</h2>
+    <div class="grid">
+      <div class="card"><div class="price">$20</div><strong>Agent 技能包</strong><ul><li>SKILL + 脚本</li><li>按你的工作流定制</li></ul></div>
+      <div class="card"><div class="price">$50</div><strong>小工具 / 修复</strong><ul><li>可运行交付</li><li>README + 示例</li></ul></div>
+      <div class="card"><div class="price">$100+</div><strong>完整自动化</strong><ul><li>端到端工作流</li><li>可开源发布</li></ul></div>
+    </div>
+
+    <h2>开工方式</h2>
+    <div class="card">
+      <ol>
+        <li>把任务写进 GitHub Issue（可附赏金金额）</li>
+        <li>或直接按价目打款到上方地址</li>
+        <li>付款/任务确认后开始交付</li>
+      </ol>
+    </div>
+
+    <p class="muted" style="margin-top:28px;font-size:.85rem">earn-desk · 独立仓库 · 不读取本机旧项目内容</p>
+  </div>
+</body>
+</html>
